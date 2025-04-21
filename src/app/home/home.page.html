@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Ejemplo ion-input</ion-title>
+  </ion-toolbar>
+  <ion-progress-bar type="indeterminate"></ion-progress-bar><ion-progress-bar type="indeterminate"></ion-progress-bar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-segment [scrollable]="true" value="heart">
+    <ion-segment-button value="home">
+      <ion-icon name="home"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="heart">
+      <ion-icon name="heart"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="pin">
+      <ion-icon name="pin"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="star">
+      <ion-icon name="star"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="call">
+      <ion-icon name="call"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="globe">
+      <ion-icon name="globe"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="basket">
+      <ion-icon name="basket"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="barbell">
+      <ion-icon name="barbell"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="trash">
+      <ion-icon name="trash"></ion-icon>
+    </ion-segment-button>
+    <ion-segment-button value="person">
+      <ion-icon name="person"></ion-icon>
+    </ion-segment-button>
+  </ion-segment><br />
+  <ion-toolbar>
+    <ion-searchbar></ion-searchbar>
+  </ion-toolbar>
+  <ion-item>
+    <ion-label position="floating">Tu nombre</ion-label>
+    <ion-input [(ngModel)]="nombre" placeholder="Escribe tu nombre..."></ion-input>
+  </ion-item>
+
+  <p *ngIf="nombre">Hola, {{ nombre }}!</p>
+  <ion-button id="open-toast" expand="block">Open</ion-button>
+  <p id="message">This toast example uses triggers to automatically open a toast when the button is clicked.</p>
+  <ion-toast trigger="open-toast" message="This toast will disappear after 5 seconds" [duration]="5000"></ion-toast>
+  <ion-radio-group value="strawberries">
+    <ion-radio value="grapes">Grapes</ion-radio><br />
+    <ion-radio value="strawberries">Strawberries</ion-radio><br />
+    <ion-radio value="pineapple">Pineapple</ion-radio><br />
+    <ion-radio value="cherries">Cherries</ion-radio><br />
+    <br />
+  </ion-radio-group>
+  <ion-checkbox>I agree to the terms and conditions</ion-checkbox><br />
+  <br />
+  <ion-datetime value="2025-04-21T00:00:00" min="2025-03-01T00:00:00" max="2032-05-31T23:59:59"></ion-datetime>
+</ion-content>
+
